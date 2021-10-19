@@ -9,17 +9,31 @@
 
 // inizializzazione delle variabili
 const userDigitWord = prompt("Digita una parola");
-/* console.log(userDigitWord); */
-
 const palindromeWord = userDigitWord.split("").reverse().join("");
 
-/* console.log(palindromeWord); */
 
 // condizione di verifica
-if (userDigitWord == palindromeWord) {
+/* if (userDigitWord == palindromeWord) {
     console.log("la parola inserita è palindroma");
 
 } else {
     console.log("la parola inserita NON è palindroma");
 
+} */
+
+// definizione di una funzione
+function palindrome (word) {
+    if (word == palindromeWord) {
+    return true;
+} else {
+    return false;
+} 
+}
+
+
+// condizione di verifica
+if (palindrome(userDigitWord) == true) {
+    document.querySelector("h1").innerHTML = `la parola ${userDigitWord} è palindroma`
+} else {
+   document.querySelector("h1").innerHTML = `la parola ${userDigitWord} NON è palindroma`
 }
