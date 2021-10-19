@@ -4,42 +4,37 @@
 // inizializzazione delle variabili
 const wordUserDigit = prompt("Scegli pari o dispari");
 const numberUserDigit = Number(prompt("Scegli un numero da 1 a 5"));
-console.log("il numero digitato dall'utente è " + numberUserDigit);
-/* const numberPc = Math.floor(Math.random() * 5) + 1;
-console.log(numberPc); */
 
-/* let sum = numberUserDigit + numberPc
-console.log(sum); */
+document.getElementById("user_digit").innerHTML = `hai scelto ${wordUserDigit} e il numero ${numberUserDigit}`
 
-
-// condzione di verifica
-/* if (sum % 2 == 0) {
-    console.log("la somma è pari");
-} else {
-     console.log("la somma è dispari");
-} */
-
+// function randomNumberPc
 function randomNumberPc(min, max) {
     return Math.floor(Math.random() * max - min + 1) + min;
     
 }
-/* console.log(randomNumberPc(1, 5)); */
 let pcNumber = randomNumberPc(1, 5)
-console.log("il numero random del pc è " + pcNumber);
+document.getElementById("pc_number").innerHTML = `il numero random del pc è ${pcNumber}`
 
+// function sum
 function sum (num1, num2) {
     return num1 + num2
     
 }
 let sommaUserAndPc = sum(numberUserDigit, pcNumber);
-console.log("la somma dei due numeri è " + sommaUserAndPc);
 
+// function sommaPariDispari
 function sommaPariDispari(somma) {
     if (somma % 2 == 0) {
     return "pari";
 }  
     return "dispari";
 }
-
 let risultatoSomma = sommaPariDispari(sum(numberUserDigit, pcNumber));
-console.log("il risultato della somma dei due numeri digitati è " + risultatoSomma);
+document.getElementById("somma").innerHTML = `la somma dei due numeri è ${sommaUserAndPc} e risulta ${risultatoSomma}`
+
+// condizione di verifica
+if (wordUserDigit == risultatoSomma) {
+    document.getElementById("vincitore").innerHTML = `perciò hai vinto`
+} else {
+    document.getElementById("vincitore").innerHTML = `perciò ha vinto il PC`
+}
