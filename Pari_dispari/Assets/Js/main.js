@@ -26,3 +26,10 @@ function randomNumberPc(min, max) {
 /* console.log(randomNumberPc(1, 5)); */
 let pcNumber = randomNumberPc(1, 5)
 console.log("il numero random del pc è " + pcNumber);
+
+function sum (num1, num2) {
+    return num1 + num2
+    
+}
+let sommaUserAndPc = sum(numberUserDigit, pcNumber);
+console.log("la somma dei due numeri è " + sommaUserAndPc);
