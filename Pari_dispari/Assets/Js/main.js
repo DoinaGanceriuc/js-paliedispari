@@ -33,3 +33,13 @@ function sum (num1, num2) {
 }
 let sommaUserAndPc = sum(numberUserDigit, pcNumber);
 console.log("la somma dei due numeri è " + sommaUserAndPc);
+
+function sommaPariDispari(somma) {
+    if (somma % 2 == 0) {
+    return "pari";
+}  
+    return "dispari";
+}
+
+let risultatoSomma = sommaPariDispari(sum(numberUserDigit, pcNumber));
+console.log("il risultato della somma dei due numeri digitati è " + risultatoSomma);
